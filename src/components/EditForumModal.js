@@ -41,9 +41,11 @@ class EditForumModal extends Component {
     handleSubmit(e) {
         e.preventDefault();
         const {editForum} = this.props;
+        console.log("PROPS")
         console.log(this.props)
+        console.log("STATE")
         console.log(this.state)
-        console.log(this.props.specificforum._id)
+        console.log("Changing Forum with ID: " + this.props.specificforum._id)
         editForum(this.props.authentication.accessToken, this.props.specificforum._id, this.state.forumName, this.state.forumDescription);
         this.setState({show : false})
     }
